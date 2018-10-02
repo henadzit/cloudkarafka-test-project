@@ -10,6 +10,7 @@ RUN apt-get -y install librdkafka1
 
 WORKDIR /app
 ADD producer.py /app/
+RUN wget https://www.cloudkarafka.com/certs/cloudkarafka.ca
 
 RUN pip install confluent-kafka
 
